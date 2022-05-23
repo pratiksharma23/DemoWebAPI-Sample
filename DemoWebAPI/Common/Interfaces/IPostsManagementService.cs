@@ -9,8 +9,8 @@ namespace DemoWebAPI.Common.Interfaces
     {
         Task<Post> GetPostAsync(int id);
         Task<List<Post>> GetPostsAsync();
-        Task<Post> PostPostAsync(Post comment);
-        Task<Post> PutPostAsync(Post comment);
+        Task<Post> PostPostAsync(Post post);
+        Task<Post> PutPostAsync(int postId, Post post);
         Task DeletePostAsync(int id);
         Task<Post> PatchPostAsync(int id, PostPatchRequest patchRequest);
     }

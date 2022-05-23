@@ -69,6 +69,7 @@ namespace DemoWebAPI
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "DemoWebAPI v1"));
             }
+            app.UseExceptionHandler("/error");
             app.UseCors(x => x
                 .AllowAnyMethod()
                 .AllowAnyHeader()

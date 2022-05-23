@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DemoWebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:DemoWebAPI.Controllers.CommentsController.#ctor(Microsoft.Extensions.Logging.ILogger{DemoWebAPI.Controllers.CommentsController},DemoWebAPI.Common.Interfaces.ICommentsManagementService)">
+            <summary>
+            Comments controller constructor 
+            </summary>
+            <param name="logger"></param>
+            <param name="commentsManagementService"></param>
+        </member>
+        <member name="M:DemoWebAPI.Controllers.CommentsController.GetCommentAsync(System.String)">
+            <summary>
+            Get Comment for the input commentId
+            </summary>
+            <param name="commentId"></param>
+        </member>
+        <member name="M:DemoWebAPI.Controllers.CommentsController.GetCommentsAsync">
+            <summary>
+            Get Comments
+            </summary>
+        </member>
+        <member name="M:DemoWebAPI.Controllers.CommentsController.CreateCommentAsync(DemoWebAPI.Models.Comment)">
+            <summary>
+            Create Comment for the input request
+            </summary>
+            <param name="commentRequest"></param>
+        </member>
+        <member name="M:DemoWebAPI.Controllers.CommentsController.UpdateCommentAsync(System.Int32,DemoWebAPI.Common.Contracts.CommentPatchRequest)">
+            <summary>
+            Update Comment for the input request
+            </summary>
+            <param name="commentId"></param>
+            <param name="commentPatchRequest"></param>
+        </member>
+        <member name="M:DemoWebAPI.Controllers.CommentsController.PutCommentAsync(System.Int32,DemoWebAPI.Models.Comment)">
+            <summary>
+            Put Comment for the input request
+            </summary>
+            <param name="commentId"></param>
+            <param name="commentRequest"></param>
+        </member>
+        <member name="M:DemoWebAPI.Controllers.CommentsController.DeleteCommentAsync(System.Int32)">
+            <summary>
+            Delete the post for a given ID
+            </summary>
+        </member>
+        <member name="T:DemoWebAPI.Controllers.PostsController">
+            <summary>
+            Posts controller
+            </summary>
+        </member>
+        <member name="M:DemoWebAPI.Controllers.PostsController.#ctor(Microsoft.Extensions.Logging.ILogger{DemoWebAPI.Controllers.PostsController},DemoWebAPI.Common.Interfaces.IPostsManagementService)">
+            <summary>
+            Posts controller constructor 
+            </summary>
+            <param name="logger"></param>
+            <param name="postsManagementService"></param>
+        </member>
+        <member name="M:DemoWebAPI.Controllers.PostsController.GetPostAsync(System.String)">
+            <summary>
+            Get Post for the input postId
+            </summary>
+            <param name="postId"></param>
+        </member>
+        <member name="M:DemoWebAPI.Controllers.PostsController.GetPostsAsync">
+            <summary>
+            Get Posts
+            </summary>
+        </member>
+        <member name="M:DemoWebAPI.Controllers.PostsController.CreatePostAsync(DemoWebAPI.Models.Post)">
+            <summary>
+            Create Post for the input request
+            </summary>
+            <param name="postRequest"></param>
+        </member>
+        <member name="M:DemoWebAPI.Controllers.PostsController.UpdatePostAsync(System.Int32,DemoWebAPI.Common.Contracts.PostPatchRequest)">
+            <summary>
+            Update Post for the input request
+            </summary>
+            <param name="postId"></param>
+            <param name="postPatchRequest"></param>
+        </member>
+        <member name="M:DemoWebAPI.Controllers.PostsController.PutPostAsync(System.Int32,DemoWebAPI.Models.Post)">
+            <summary>
+            Put Post for the input request
+            </summary>
+            <param name="postId"></param>
+            <param name="postRequest"></param>
+        </member>
+        <member name="M:DemoWebAPI.Controllers.PostsController.DeletePostAsync(System.Int32)">
+            <summary>
+            Delete the post for a given ID
+            </summary>
+        </member>
+    </members>
+</doc>

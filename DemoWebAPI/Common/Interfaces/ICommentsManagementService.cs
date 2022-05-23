@@ -10,8 +10,8 @@ namespace DemoWebAPI.Common.Interfaces
         Task<Comment> GetCommentAsync(int id);
         Task<List<Comment>> GetCommentsAsync();
         Task<Comment> PostCommentAsync(Comment comment);
-        Task<Comment> PutCommentAsync(Comment comment);
+        Task<Comment> PutCommentAsync(int commentId, Comment comment);
         Task DeleteCommentAsync(int id);
-        Task<Comment> PatchCommentAsync(CommentPatchRequest patchRequest);
+        Task<Comment> PatchCommentAsync(int commentId, CommentPatchRequest patchRequest);
     }
 }
