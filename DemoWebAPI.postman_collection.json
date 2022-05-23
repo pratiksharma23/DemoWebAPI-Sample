@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "049b910e-2473-4a7e-a956-dc93f6bd7b11",
+		"name": "DemoWebAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13625024"
+	},
+	"item": [
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "GET Post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/posts/100",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"posts",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Pratik Post\",\r\n    \"body\": \"Post text\",\r\n    \"userId\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/posts",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/posts/100",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"posts",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Post",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Pratik Post\",\r\n    \"body\": \"Post body\",\r\n    \"userId\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/posts/100",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"posts",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH Post",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/posts/100",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"posts",
+								"100"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "GET Comment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/comments/10",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"comments",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postId\": 10,\r\n    \"name\": \"TestComment\",\r\n    \"body\": \"CommentBody\",\r\n    \"email\": \"TestEmail\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/comments",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/comments/10",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"comments",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Comment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postId\": 10,\r\n    \"name\": \"TestComment\",\r\n    \"body\": \"CommentBody\",\r\n    \"email\": \"TestEmail\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/comments/10",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"comments",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH Comment",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"body\": \"Test body\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/comments/10",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"comments",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
