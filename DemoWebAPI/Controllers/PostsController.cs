@@ -127,40 +127,6 @@ namespace DemoWebAPI.Controllers
         }
 
         /// <summary>
-        /// Update Post for the input request
-        /// </summary>
-        /// <param name="postId"></param>
-        /// <param name="postPatchRequest"></param>
-        [HttpPatch("{postId}")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Post))]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        [SwaggerOperation(OperationId = "Post_Patch")]
-        public async Task<ActionResult<Post>> UpdatePostAsync(int postId, [FromBody] PostPatchRequest postPatchRequest)
-        {
-            _log.LogInformation("Post_Patch");
-            if (postPatchRequest == null)
-            {
-                var error = "Invalid request: body can not be null";
-                _log.LogError(error);
-                return BadRequest(error);
-            }
-            var resource = await _postsManagementService.PatchPostAsync(postId, postPatchRequest);
-            if (resource == null)
-            {
-                var error = $"Unable to patch Post for Id: {postId}";
-                _log.LogError(error);
-                return StatusCode(StatusCodes.Status500InternalServerError, error);
-            }
-            else
-            {
-                _log.LogInformation($"Successfully patched post for id: {postId}");
-                return Ok(resource);
-            }
-        }
-
-        /// <summary>
         /// Put Post for the input request
         /// </summary>
         /// <param name="postId"></param>

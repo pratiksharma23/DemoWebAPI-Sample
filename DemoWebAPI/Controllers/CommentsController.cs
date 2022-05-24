@@ -124,40 +124,6 @@ namespace DemoWebAPI.Controllers
         }
 
         /// <summary>
-        /// Update Comment for the input request
-        /// </summary>
-        /// <param name="commentId"></param>
-        /// <param name="commentPatchRequest"></param>
-        [HttpPatch("{commentId}")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Comment))]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        [SwaggerOperation(OperationId = "Comment_Patch")]
-        public async Task<ActionResult<Comment>> UpdateCommentAsync(int commentId, [FromBody] CommentPatchRequest commentPatchRequest)
-        {
-            _log.LogInformation("Comment_Patch");
-            if (commentPatchRequest == null)
-            {
-                var error = "Invalid request: body can not be null";
-                _log.LogError(error);
-                return BadRequest(error);
-            }
-            var resource = await _commentsManagementService.PatchCommentAsync(commentId, commentPatchRequest);
-            if (resource == null)
-            {
-                var error = $"Unable to patch Comment for Id: {commentId}";
-                _log.LogError(error);
-                return StatusCode(StatusCodes.Status500InternalServerError, error);
-            }
-            else
-            {
-                _log.LogInformation("Successfully patched comment for id: {commentId}");
-                return Ok(resource);
-            }
-        }
-
-        /// <summary>
         /// Put Comment for the input request
         /// </summary>
         /// <param name="commentId"></param>
